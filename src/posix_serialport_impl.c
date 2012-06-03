@@ -506,7 +506,7 @@ VALUE sp_set_read_timeout_impl(self, val)
    else if (timeout == 0)
    {
       params.c_cc[VTIME] = 0;
-      params.c_cc[VMIN] = 1;
+      params.c_cc[VMIN] = 128;
    }
    else
    {
